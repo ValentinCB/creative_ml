@@ -177,7 +177,7 @@ def draw_ellipse(position, covariance, ax=None, **kwargs):
     # Draw the Ellipse
     for nsig in range(1, 4):
         ax.add_patch(Ellipse(position, nsig * width, nsig * height,
-                             angle, **kwargs))
+                             angle=angle, **kwargs))
         
 def plot_gmm(gmm, X, label=True, ax=None):
     plt.figure(figsize=(10,8))
